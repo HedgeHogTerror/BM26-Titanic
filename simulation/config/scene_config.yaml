@@ -245,7 +245,7 @@ parLights:
   _section:
     label: 🔌 DMX Fixtures
     type: fixtureArray
-    collapsed: false
+    collapsed: true
   parsEnabled:
     value: true
     label: Master Enabled
@@ -253,9 +253,89 @@ parLights:
     value: false
     label: Show Light Cones
   generatorsVisible:
-    value: true
+    value: false
     label: Show Generators
   fixtures:
+    - group: Right Front Wall Generator
+      name: Right Front Wall Generator 1
+      fixtureType: ShehdsBar
+      color: '#ffaa44'
+      intensity: 10
+      angle: 30
+      penumbra: 0.5
+      x: 22.625892841521015
+      y: 9.982846383806601
+      z: 1.4042147718348805
+      rotX: -59.48713263925375
+      rotY: 127.42998852022393
+      rotZ: -89.32780251733219
+      controllerIp: ''
+      dmxUniverse: 0
+      dmxAddress: 0
+    - group: Right Front Wall Generator
+      name: Right Front Wall Generator 2
+      fixtureType: ShehdsBar
+      color: '#ffaa44'
+      intensity: 10
+      angle: 30
+      penumbra: 0.5
+      x: 25.07983188994502
+      y: 8.142445081659536
+      z: -0.5275541568093454
+      rotX: -59.48713263925375
+      rotY: 127.42998852022393
+      rotZ: -89.32780251733219
+      controllerIp: ''
+      dmxUniverse: 0
+      dmxAddress: 0
+    - group: Right Front Wall Generator
+      name: Right Front Wall Generator 3
+      fixtureType: ShehdsBar
+      color: '#ffaa44'
+      intensity: 10
+      angle: 30
+      penumbra: 0.5
+      x: 27.533770938369027
+      y: 6.302043779512473
+      z: -2.4593230854535713
+      rotX: -59.48713263925375
+      rotY: 127.42998852022393
+      rotZ: -89.32780251733219
+      controllerIp: ''
+      dmxUniverse: 0
+      dmxAddress: 0
+    - group: Right Front Wall Generator
+      name: Right Front Wall Generator 4
+      fixtureType: ShehdsBar
+      color: '#ffaa44'
+      intensity: 10
+      angle: 30
+      penumbra: 0.5
+      x: 29.987709986793035
+      y: 4.461642477365409
+      z: -4.391092014097797
+      rotX: -59.48713263925375
+      rotY: 127.42998852022393
+      rotZ: -89.32780251733219
+      controllerIp: ''
+      dmxUniverse: 0
+      dmxAddress: 0
+    - group: Right Front Wall Generator
+      name: Right Front Wall Generator 5
+      fixtureType: ShehdsBar
+      color: '#ffaa44'
+      intensity: 10
+      angle: 30
+      penumbra: 0.5
+      x: 32.44164903521704
+      y: 2.621241175218344
+      z: -6.3228609427420235
+      rotX: -59.48713263925375
+      rotY: 127.42998852022393
+      rotZ: -89.32780251733219
+      controllerIp: ''
+      dmxUniverse: 0
+      dmxAddress: 0
     - group: Right Top Chimney Generator
       name: Right Top Chimney Generator 1
       fixtureType: UkingPar
@@ -397,6 +477,70 @@ parLights:
       rotX: 74.96810675387201
       rotY: -51.35644581331218
       rotZ: -40.47966148021137
+      controllerIp: ''
+      dmxUniverse: 0
+      dmxAddress: 0
+    - group: Right Front Deck Generator
+      name: Right Front Deck Generator 1
+      fixtureType: VintageLed
+      color: '#f07100'
+      intensity: 22
+      angle: 50
+      penumbra: 0.5
+      x: 22.0208959061585
+      y: 12.255093216894892
+      z: -1.2891427347908175
+      rotX: -49.06830238112582
+      rotY: 175.9085132119936
+      rotZ: -39.825848387739455
+      controllerIp: ''
+      dmxUniverse: 0
+      dmxAddress: 0
+    - group: Right Front Deck Generator
+      name: Right Front Deck Generator 2
+      fixtureType: VintageLed
+      color: '#f07100'
+      intensity: 22
+      angle: 50
+      penumbra: 0.5
+      x: 25.30863429555036
+      y: 9.823160370103558
+      z: -3.865494811415355
+      rotX: -49.06830238112582
+      rotY: 175.9085132119936
+      rotZ: -39.825848387739455
+      controllerIp: ''
+      dmxUniverse: 0
+      dmxAddress: 0
+    - group: Right Front Deck Generator
+      name: Right Front Deck Generator 3
+      fixtureType: VintageLed
+      color: '#f07100'
+      intensity: 22
+      angle: 50
+      penumbra: 0.5
+      x: 28.596372684942214
+      y: 7.391227523312224
+      z: -6.441846888039892
+      rotX: -49.06830238112582
+      rotY: 175.9085132119936
+      rotZ: -39.825848387739455
+      controllerIp: ''
+      dmxUniverse: 0
+      dmxAddress: 0
+    - group: Right Front Deck Generator
+      name: Right Front Deck Generator 4
+      fixtureType: VintageLed
+      color: '#f07100'
+      intensity: 22
+      angle: 50
+      penumbra: 0.5
+      x: 31.884111074334072
+      y: 4.959294676520891
+      z: -9.01819896466443
+      rotX: -49.06830238112582
+      rotY: 175.9085132119936
+      rotZ: -39.825848387739455
       controllerIp: ''
       dmxUniverse: 0
       dmxAddress: 0
@@ -1179,8 +1323,8 @@ parLights:
       y: 9.978051891799492
       z: -10.096324648090516
       rotX: -60.468706794414956
-      rotY: 124.89660280335698
-      rotZ: 92.74276245626537
+      rotY: 124.89660280335696
+      rotZ: 92.7427624562654
       controllerIp: ''
       dmxUniverse: 0
       dmxAddress: 0
@@ -1504,150 +1648,6 @@ parLights:
       controllerIp: ''
       dmxUniverse: 0
       dmxAddress: 0
-    - group: Right Front Deck Generator
-      name: Right Front Deck Generator 1
-      fixtureType: VintageLed
-      color: '#f07100'
-      intensity: 22
-      angle: 50
-      penumbra: 0.5
-      x: 22.0208959061585
-      y: 12.255093216894892
-      z: -1.2891427347908175
-      rotX: -49.06830238112582
-      rotY: 175.9085132119936
-      rotZ: -39.825848387739455
-      controllerIp: ''
-      dmxUniverse: 0
-      dmxAddress: 0
-    - group: Right Front Deck Generator
-      name: Right Front Deck Generator 2
-      fixtureType: VintageLed
-      color: '#f07100'
-      intensity: 22
-      angle: 50
-      penumbra: 0.5
-      x: 25.30863429555036
-      y: 9.823160370103558
-      z: -3.865494811415355
-      rotX: -49.06830238112582
-      rotY: 175.9085132119936
-      rotZ: -39.825848387739455
-      controllerIp: ''
-      dmxUniverse: 0
-      dmxAddress: 0
-    - group: Right Front Deck Generator
-      name: Right Front Deck Generator 3
-      fixtureType: VintageLed
-      color: '#f07100'
-      intensity: 22
-      angle: 50
-      penumbra: 0.5
-      x: 28.596372684942214
-      y: 7.391227523312224
-      z: -6.441846888039892
-      rotX: -49.06830238112582
-      rotY: 175.9085132119936
-      rotZ: -39.825848387739455
-      controllerIp: ''
-      dmxUniverse: 0
-      dmxAddress: 0
-    - group: Right Front Deck Generator
-      name: Right Front Deck Generator 4
-      fixtureType: VintageLed
-      color: '#f07100'
-      intensity: 22
-      angle: 50
-      penumbra: 0.5
-      x: 31.884111074334072
-      y: 4.959294676520891
-      z: -9.01819896466443
-      rotX: -49.06830238112582
-      rotY: 175.9085132119936
-      rotZ: -39.825848387739455
-      controllerIp: ''
-      dmxUniverse: 0
-      dmxAddress: 0
-    - group: Right Front Wall Generator
-      name: Right Front Wall Generator 1
-      fixtureType: ShehdsBar
-      color: '#ffaa44'
-      intensity: 10
-      angle: 30
-      penumbra: 0.5
-      x: 22.625892841521015
-      y: 9.982846383806601
-      z: 1.4042147718348805
-      rotX: -59.48713263925375
-      rotY: 127.42998852022393
-      rotZ: -89.32780251733219
-      controllerIp: ''
-      dmxUniverse: 0
-      dmxAddress: 0
-    - group: Right Front Wall Generator
-      name: Right Front Wall Generator 2
-      fixtureType: ShehdsBar
-      color: '#ffaa44'
-      intensity: 10
-      angle: 30
-      penumbra: 0.5
-      x: 25.07983188994502
-      y: 8.142445081659536
-      z: -0.5275541568093454
-      rotX: -59.48713263925375
-      rotY: 127.42998852022393
-      rotZ: -89.32780251733219
-      controllerIp: ''
-      dmxUniverse: 0
-      dmxAddress: 0
-    - group: Right Front Wall Generator
-      name: Right Front Wall Generator 3
-      fixtureType: ShehdsBar
-      color: '#ffaa44'
-      intensity: 10
-      angle: 30
-      penumbra: 0.5
-      x: 27.533770938369027
-      y: 6.302043779512473
-      z: -2.4593230854535713
-      rotX: -59.48713263925375
-      rotY: 127.42998852022393
-      rotZ: -89.32780251733219
-      controllerIp: ''
-      dmxUniverse: 0
-      dmxAddress: 0
-    - group: Right Front Wall Generator
-      name: Right Front Wall Generator 4
-      fixtureType: ShehdsBar
-      color: '#ffaa44'
-      intensity: 10
-      angle: 30
-      penumbra: 0.5
-      x: 29.987709986793035
-      y: 4.461642477365409
-      z: -4.391092014097797
-      rotX: -59.48713263925375
-      rotY: 127.42998852022393
-      rotZ: -89.32780251733219
-      controllerIp: ''
-      dmxUniverse: 0
-      dmxAddress: 0
-    - group: Right Front Wall Generator
-      name: Right Front Wall Generator 5
-      fixtureType: ShehdsBar
-      color: '#ffaa44'
-      intensity: 10
-      angle: 30
-      penumbra: 0.5
-      x: 32.44164903521704
-      y: 2.621241175218344
-      z: -6.3228609427420235
-      rotX: -59.48713263925375
-      rotY: 127.42998852022393
-      rotZ: -89.32780251733219
-      controllerIp: ''
-      dmxUniverse: 0
-      dmxAddress: 0
   traces:
     - name: Right Front Wall Generator
       shape: line
@@ -1851,9 +1851,9 @@ parLights:
       x: -22.284765386246967
       y: 8.306174569905535
       z: 8.651787739680122
-      rotX: 0.0002875901438091676
-      rotY: 0.8704599574352214
-      rotZ: 29.962140972033573
+      rotX: 0.0002875901438091924
+      rotY: 0.8704599574352218
+      rotZ: 29.96214097203358
       aimMode: lookAt
       aimX: -26.932126807268464
       aimY: 14.255251214083259
@@ -1897,7 +1897,7 @@ ledStrands:
   _section:
     label: 🔌 LED Lights
     type: ledStrandArray
-    collapsed: true
+    collapsed: false
   strandsEnabled:
     value: true
     label: Master Enabled
@@ -1922,12 +1922,152 @@ ledStrands:
       color: '#ff8800'
       intensity: 1
       ledCount: 100
+    - name: Strand 3
+      startX: -31.5
+      startY: 2
+      startZ: 4
+      endX: -28
+      endY: 12.5
+      endZ: 7.5
+      color: '#ff8800'
+      intensity: 1
+      ledCount: 100
+    - name: Strand 4
+      startX: -27
+      startY: 5
+      startZ: 3.5
+      endX: -27.5
+      endY: 13
+      endZ: 6.5
+      color: '#ff8800'
+      intensity: 1
+      ledCount: 100
+    - name: Strand 5
+      startX: -16.900000000000002
+      startY: 10.5
+      startZ: 3.9000000000000004
+      endX: -26
+      endY: 14.200000000000001
+      endZ: 6.6000000000000005
+      color: '#ff8800'
+      intensity: 1
+      ledCount: 100
+    - name: Strand 6
+      startX: -13.700000000000001
+      startY: 12.5
+      startZ: 3.8000000000000003
+      endX: -25.400000000000002
+      endY: 14.700000000000001
+      endZ: 7.1000000000000005
+      color: '#ff8800'
+      intensity: 1
+      ledCount: 100
+    - name: Strand 7
+      startX: -13.5
+      startY: 12.600000000000001
+      startZ: 13.4
+      endX: -25.5
+      endY: 14.8
+      endZ: 10.100000000000001
+      color: '#ff8800'
+      intensity: 1
+      ledCount: 100
+    - name: Strand 8
+      startX: -17
+      startY: 10.5
+      startZ: 13.3
+      endX: -26.1
+      endY: 14.200000000000001
+      endZ: 10.600000000000001
+      color: '#ff8800'
+      intensity: 1
+      ledCount: 100
+    - name: Strand 9
+      startX: 13.5
+      startY: 12.600000000000001
+      startZ: -7.1000000000000005
+      endX: 24.900000000000002
+      endY: 14.9
+      endZ: -11.9
+      color: '#ff8800'
+      intensity: 1.1
+      ledCount: 100
+    - name: Strand 10
+      startX: 16.400000000000002
+      startY: 10.700000000000001
+      startZ: -9.200000000000001
+      endX: 25.1
+      endY: 14.3
+      endZ: -12.600000000000001
+      color: '#ff8800'
+      intensity: 1
+      ledCount: 100
+    - name: Strand 11
+      startX: 23.8
+      startY: 5
+      startZ: -15.3
+      endX: 26.3
+      endY: 13.200000000000001
+      endZ: -13.3
+      color: '#ff8800'
+      intensity: 1
+      ledCount: 100
+    - name: Strand 12
+      startX: 27.6
+      startY: 2.1
+      startZ: -18.1
+      endX: 27.200000000000003
+      endY: 12.700000000000001
+      endZ: -13.200000000000001
+      color: '#ff8800'
+      intensity: 1
+      ledCount: 100
+    - name: Strand 13
+      startX: 33.6
+      startY: 2.1
+      startZ: -10.600000000000001
+      endX: 28.6
+      endY: 12.600000000000001
+      endZ: -11.3
+      color: '#ff8800'
+      intensity: 1
+      ledCount: 100
+    - name: Strand 14
+      startX: 29.8
+      startY: 4.9
+      startZ: -7.800000000000001
+      endX: 28.5
+      endY: 13
+      endZ: -10.4
+      color: '#ff8800'
+      intensity: 1
+      ledCount: 100
+    - name: Strand 15
+      startX: 22.200000000000003
+      startY: 10.5
+      startZ: -1.7000000000000002
+      endX: 27.700000000000003
+      endY: 14.100000000000001
+      endZ: -9.600000000000001
+      color: '#ff8800'
+      intensity: 1
+      ledCount: 100
+    - name: Strand 16
+      startX: 19.5
+      startY: 12.4
+      startZ: 0.4
+      endX: 26.900000000000002
+      endY: 14.600000000000001
+      endZ: -9.600000000000001
+      color: '#ff8800'
+      intensity: 1
+      ledCount: 100
 
 # ─── Options ──────────────────────────────────────────────────────────────
 options:
   _section:
     label: ⚙️ Options
-    collapsed: false
+    collapsed: true
   editMode:
     value: false
     label: 🛠️ Edit Mode (Flat Shading)
@@ -1999,17 +2139,17 @@ config:
     label: Auto-Save on Change
 _camera:
   position:
-    x: 44.7871
-    y: 22.4616
-    z: 13.5255
+    x: 14.6601
+    y: 27.9601
+    z: -24.3935
   target:
-    x: 21.7898
-    y: -2.6313
-    z: -14.4556
+    x: 26.7839
+    y: 3.0305
+    z: -12.5539
 _patternEditor:
   x: 11
   y: 47
-  width: 400
-  height: 200
+  width: 359
+  height: 374
   collapsed: false
   autoRun: false
