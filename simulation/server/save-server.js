@@ -84,6 +84,36 @@ function listPatterns() {
   return [...numbered, ...named];
 }
 
+// Minimal config a freshly-created scene starts from: the standard Model
+// Transform, an empty DMX fixture array, and an empty LED strand array.
+// Missing cameras/patches/views/controllers are the legitimate "new scene"
+// case the client already handles (main.js bootstrap), so we only seed
+// scene_config.yaml — the operator builds the rest in-app and saves.
+const NEW_SCENE_TEMPLATE = {
+  modelTransform: {
+    _section: { label: '📦 Model Transform', collapsed: true },
+    modelX: { value: 0, label: 'Pos X', min: -500, max: 500, step: 1, listen: true },
+    modelY: { value: 0, label: 'Pos Y', min: -500, max: 500, step: 1, listen: true },
+    modelZ: { value: 0, label: 'Pos Z', min: -500, max: 500, step: 1, listen: true },
+    rotX: { value: 0, label: 'Rot X °', min: -180, max: 180, step: 1, listen: true },
+    rotY: { value: 0, label: 'Rot Y °', min: -180, max: 180, step: 1, listen: true },
+    rotZ: { value: 0, label: 'Rot Z °', min: -180, max: 180, step: 1, listen: true },
+  },
+  parLights: {
+    _section: { label: '🔌 DMX Fixtures', type: 'fixtureArray', collapsed: false },
+    parsEnabled: { value: true, label: 'Master Enabled' },
+    masterExposure: { value: 0.2, label: 'Sim Exposure (Preview Only)', min: 0, max: 2, step: 0.05 },
+    simBrightness: { value: 1, label: 'Sim Brightness (Preview Only)', min: 0, max: 2, step: 0.05 },
+    maxSpotlights: { value: 60, label: 'Max Spotlights', min: 1, max: 200, step: 1 },
+    fixtures: [],
+  },
+  ledStrands: {
+    _section: { label: '💡 LED Strands', type: 'ledStrandArray', collapsed: true },
+    strandsEnabled: { value: true, label: 'Master Enabled' },
+    strands: [],
+  },
+};
+
 function writeSceneManifest() {
   try {
     fs.mkdirSync(SCENES_ROOT, { recursive: true });
@@ -361,6 +391,65 @@ http.createServer((req, res) => {
         res.end('Saved');
       } catch (e) {
         console.error(`[SAVE SERVER] Model save error:`, e);
+        res.statusCode = 500;
+        res.end('Error: ' + e.message);
+      }
+    });
+  } else if (req.method === 'POST' && pathname === '/create-scene') {
+    let body = '';
+    req.on('data', chunk => body += chunk);
+    req.on('end', () => {
+      try {
+        const { name } = JSON.parse(body);
+        if (!name) throw new Error('Missing name');
+        // Sanitize exactly like /save — a raw name must never become a
+        // path segment of its own. An empty result after sanitizing is a
+        // hard error (no silent default scene, codex P0).
+        const safeName = name.replace(/[^a-z0-9_-]/gi, '_').replace(/^_+|_+$/g, '');
+        if (!safeName) throw new Error('Name has no usable characters');
+        const sceneDir = path.join(SCENES_ROOT, safeName);
+        const cfgPath = path.join(sceneDir, 'scene_config.yaml');
+        if (fs.existsSync(cfgPath)) {
+          res.statusCode = 409;
+          res.end('Scene already exists');
+          return;
+        }
+        fs.mkdirSync(sceneDir, { recursive: true });
+        writeFileAtomic(cfgPath, yaml.dump(NEW_SCENE_TEMPLATE, { lineWidth: -1 }));
+        console.log(`[SAVE SERVER] ✅ Created scene: ${sceneDir}`);
+        writeSceneManifest();
+        res.setHeader('Content-Type', 'application/json');
+        res.end(JSON.stringify({ scene: safeName }));
+      } catch (e) {
+        console.error(`[SAVE SERVER] Scene create error:`, e);
+        res.statusCode = 500;
+        res.end('Error: ' + e.message);
+      }
+    });
+  } else if (req.method === 'POST' && pathname === '/delete-scene') {
+    let body = '';
+    req.on('data', chunk => body += chunk);
+    req.on('end', () => {
+      try {
+        const { name } = JSON.parse(body);
+        if (!name) throw new Error('Missing name');
+        const safeName = name.replace(/[^a-z0-9_-]/gi, '_').replace(/^_+|_+$/g, '');
+        if (!safeName) throw new Error('Name has no usable characters');
+        const sceneDir = path.join(SCENES_ROOT, safeName);
+        // Guard: only ever remove a directory that is actually a scene
+        // (has scene_config.yaml), and that lives directly under scenes/.
+        // This keeps a malformed name from deleting anything unexpected.
+        if (path.dirname(sceneDir) !== SCENES_ROOT || !fs.existsSync(path.join(sceneDir, 'scene_config.yaml'))) {
+          res.statusCode = 404;
+          res.end('Not found');
+          return;
+        }
+        fs.rmSync(sceneDir, { recursive: true, force: true });
+        console.log(`[SAVE SERVER] 🗑️  Deleted scene: ${sceneDir}`);
+        writeSceneManifest();
+        res.end('Deleted');
+      } catch (e) {
+        console.error(`[SAVE SERVER] Scene delete error:`, e);
         res.statusCode = 500;
         res.end('Error: ' + e.message);
       }
