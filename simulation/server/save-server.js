@@ -84,6 +84,17 @@ function listPatterns() {
   return [...numbered, ...named];
 }
 
+// A scene name must be a single safe path segment: it starts with an
+// alphanumeric and then allows alphanumerics, underscore and hyphen. We
+// REJECT anything else rather than rewriting it. The old "sanitize" step
+// (replace bad chars with '_' then strip leading/trailing '_') was not
+// injective — "../titanic" collapsed to "titanic", so a crafted delete
+// could destroy the wrong scene. Rejecting keeps the codex "fail loud,
+// no silent fallback" contract.
+function isValidSceneName(name) {
+  return typeof name === 'string' && /^[A-Za-z0-9][A-Za-z0-9_-]*$/.test(name);
+}
+
 // Minimal config a freshly-created scene starts from: the standard Model
 // Transform, an empty DMX fixture array, and an empty LED strand array.
 // Missing cameras/patches/views/controllers are the legitimate "new scene"
@@ -401,25 +412,25 @@ http.createServer((req, res) => {
     req.on('end', () => {
       try {
         const { name } = JSON.parse(body);
-        if (!name) throw new Error('Missing name');
-        // Sanitize exactly like /save — a raw name must never become a
-        // path segment of its own. An empty result after sanitizing is a
-        // hard error (no silent default scene, codex P0).
-        const safeName = name.replace(/[^a-z0-9_-]/gi, '_').replace(/^_+|_+$/g, '');
-        if (!safeName) throw new Error('Name has no usable characters');
-        const sceneDir = path.join(SCENES_ROOT, safeName);
-        const cfgPath = path.join(sceneDir, 'scene_config.yaml');
-        if (fs.existsSync(cfgPath)) {
+        if (!isValidSceneName(name)) {
+          res.statusCode = 400;
+          res.end('Invalid scene name');
+          return;
+        }
+        const sceneDir = path.join(SCENES_ROOT, name);
+        // Refuse if anything already lives at this path — never adopt or
+        // merge into a pre-existing directory (codex P0: fail loud).
+        if (fs.existsSync(sceneDir)) {
           res.statusCode = 409;
           res.end('Scene already exists');
           return;
         }
         fs.mkdirSync(sceneDir, { recursive: true });
-        writeFileAtomic(cfgPath, yaml.dump(NEW_SCENE_TEMPLATE, { lineWidth: -1 }));
+        writeFileAtomic(path.join(sceneDir, 'scene_config.yaml'), yaml.dump(NEW_SCENE_TEMPLATE, { lineWidth: -1 }));
         console.log(`[SAVE SERVER] ✅ Created scene: ${sceneDir}`);
         writeSceneManifest();
         res.setHeader('Content-Type', 'application/json');
-        res.end(JSON.stringify({ scene: safeName }));
+        res.end(JSON.stringify({ scene: name }));
       } catch (e) {
         console.error(`[SAVE SERVER] Scene create error:`, e);
         res.statusCode = 500;
@@ -432,13 +443,16 @@ http.createServer((req, res) => {
     req.on('end', () => {
       try {
         const { name } = JSON.parse(body);
-        if (!name) throw new Error('Missing name');
-        const safeName = name.replace(/[^a-z0-9_-]/gi, '_').replace(/^_+|_+$/g, '');
-        if (!safeName) throw new Error('Name has no usable characters');
-        const sceneDir = path.join(SCENES_ROOT, safeName);
-        // Guard: only ever remove a directory that is actually a scene
-        // (has scene_config.yaml), and that lives directly under scenes/.
-        // This keeps a malformed name from deleting anything unexpected.
+        if (!isValidSceneName(name)) {
+          res.statusCode = 400;
+          res.end('Invalid scene name');
+          return;
+        }
+        const sceneDir = path.join(SCENES_ROOT, name);
+        // Defense in depth: a validated name is already a single safe
+        // segment, but re-confirm the resolved dir sits directly under
+        // scenes/ and is a real scene (has scene_config.yaml) before any
+        // recursive removal.
         if (path.dirname(sceneDir) !== SCENES_ROOT || !fs.existsSync(path.join(sceneDir, 'scene_config.yaml'))) {
           res.statusCode = 404;
           res.end('Not found');

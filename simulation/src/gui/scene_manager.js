@@ -65,11 +65,21 @@ function ensureOverlay() {
   return overlay;
 }
 
+/** True while a scene add/delete modal is open (drives the keyboard guard
+ *  in interaction.js so sim shortcuts don't fire underneath it). */
+export function isSceneModalOpen() {
+  return !!_overlay && !_overlay.classList.contains('hidden');
+}
+
 /**
  * Show the themed modal. Resolves to the trimmed input string (when
  * withInput) or `true` on confirm, and `null` on cancel / Esc / backdrop.
  */
 function showModal({ title, message = '', withInput = false, placeholder = '', okLabel = 'OK', danger = false }) {
+  // Re-entrancy guard: the overlay and its listeners are a singleton, so a
+  // second open while one is live would stack duplicate listeners and let a
+  // single click/Enter resolve two flows. Ignore overlapping opens.
+  if (isSceneModalOpen()) return Promise.resolve(null);
   const overlay = ensureOverlay();
   const titleEl = overlay.querySelector('.scene-modal-title');
   const msgEl = overlay.querySelector('.scene-modal-message');
@@ -148,7 +158,9 @@ async function handleAdd() {
       return;
     }
     if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-    const { scene } = await resp.json();
+    const data = await resp.json().catch(() => null);
+    const scene = data && typeof data.scene === 'string' ? data.scene : '';
+    if (!scene) throw new Error('Server did not return a scene name');
     const url = new URL(window.location.href);
     url.searchParams.set('scene', scene);
     window.location.href = url.toString();
