@@ -1,0 +1,293 @@
+modelTransform:
+  _section:
+    label: 📦 Model Transform
+    collapsed: true
+  modelX:
+    value: 0
+    label: Pos X
+    min: -500
+    max: 500
+    step: 1
+    listen: true
+  modelY:
+    value: 0
+    label: Pos Y
+    min: -500
+    max: 500
+    step: 1
+    listen: true
+  modelZ:
+    value: 0
+    label: Pos Z
+    min: -500
+    max: 500
+    step: 1
+    listen: true
+  rotX:
+    value: 0
+    label: Rot X °
+    min: -180
+    max: 180
+    step: 1
+    listen: true
+  rotY:
+    value: 0
+    label: Rot Y °
+    min: -180
+    max: 180
+    step: 1
+    listen: true
+  rotZ:
+    value: 0
+    label: Rot Z °
+    min: -180
+    max: 180
+    step: 1
+    listen: true
+parLights:
+  _section:
+    label: 🔌 DMX Fixtures
+    type: fixtureArray
+    collapsed: false
+  parsEnabled:
+    value: true
+    label: Master Enabled
+  masterExposure:
+    value: 0.2
+    label: Sim Exposure (Preview Only)
+    min: 0
+    max: 2
+    step: 0.05
+  simBrightness:
+    value: 1
+    label: Sim Brightness (Preview Only)
+    min: 0
+    max: 2
+    step: 0.05
+  maxSpotlights:
+    value: 60
+    label: Max Spotlights
+    min: 1
+    max: 200
+    step: 1
+  fixtures:
+    - group: Bars_3_4
+      name: ShehdsBar 5
+      fixtureType: ShehdsBar
+      color: '#ffaa44'
+      intensity: 5
+      angle: 20
+      penumbra: 0.5
+      x: -6.799688680425194
+      'y': 4.980040580497269
+      z: -2.2516872347077364
+      rotX: 0
+      rotY: -89.99999999999999
+      rotZ: 0
+    - group: Bars_3_4
+      name: ShehdsBar 6
+      fixtureType: ShehdsBar
+      color: '#ffaa44'
+      intensity: 5
+      angle: 20
+      penumbra: 0.5
+      x: -4.394853334737405
+      'y': 4.918850427871055
+      z: -0.01437472987236621
+      rotX: 0
+      rotY: 0
+      rotZ: 0
+    - group: Bars_5_6_7
+      name: Bars_5_6_7 1
+      fixtureType: ShehdsBar
+      color: '#ffaa44'
+      intensity: 10
+      angle: 30
+      penumbra: 0.5
+      x: -7.032730061530545
+      'y': 5
+      z: -13.14206907964391
+      rotX: -15.667615101321593
+      rotY: -90.79163548573341
+      rotZ: 0
+      traceGenerated: true
+    - group: Bars_5_6_7
+      name: Bars_5_6_7 2
+      fixtureType: ShehdsBar
+      color: '#ffaa44'
+      intensity: 10
+      angle: 30
+      penumbra: 0.5
+      x: -7.079359425085533
+      'y': 5
+      z: -9.767415249269392
+      rotX: -15.667615101321593
+      rotY: -90.79163548573341
+      rotZ: 0
+      traceGenerated: true
+    - group: Bars_5_6_7
+      name: Bars_5_6_7 3
+      fixtureType: ShehdsBar
+      color: '#ffaa44'
+      intensity: 10
+      angle: 30
+      penumbra: 0.5
+      x: -7.12598878864052
+      'y': 5
+      z: -6.3927614188948745
+      rotX: -15.667615101321593
+      rotY: -90.79163548573341
+      rotZ: 0
+      traceGenerated: true
+    - group: Bars_0_1_2
+      name: Bars_0_1_2 1
+      fixtureType: ShehdsBar
+      color: '#ffaa44'
+      intensity: 10
+      angle: 30
+      penumbra: 0.5
+      x: 6.029599387217219
+      'y': 5
+      z: 0
+      rotX: -9.46232220802562
+      rotY: -8.481479150569377e-15
+      rotZ: 180
+      traceGenerated: true
+    - group: Bars_0_1_2
+      name: Bars_0_1_2 2
+      fixtureType: ShehdsBar
+      color: '#ffaa44'
+      intensity: 10
+      angle: 30
+      penumbra: 0.5
+      x: 2.5870761236858018
+      'y': 5
+      z: 0
+      rotX: -9.46232220802562
+      rotY: -8.481479150569377e-15
+      rotZ: 180
+      traceGenerated: true
+    - group: Bars_0_1_2
+      name: Bars_0_1_2 3
+      fixtureType: ShehdsBar
+      color: '#ffaa44'
+      intensity: 10
+      angle: 30
+      penumbra: 0.5
+      x: -0.8554471398456158
+      'y': 5
+      z: 0
+      rotX: -9.46232220802562
+      rotY: -8.481479150569377e-15
+      rotZ: 180
+      traceGenerated: true
+    - group: Bars_8_9
+      name: Bars_8_9 1
+      fixtureType: ShehdsBar
+      color: '#ffaa44'
+      intensity: 10
+      angle: 30
+      penumbra: 0.5
+      x: 0.09973751431044908
+      'y': 5
+      z: -14.5
+      rotX: -15.111811601597742
+      rotY: -180
+      rotZ: 0
+      traceGenerated: true
+    - group: Bars_8_9
+      name: Bars_8_9 2
+      fixtureType: ShehdsBar
+      color: '#ffaa44'
+      intensity: 10
+      angle: 30
+      penumbra: 0.5
+      x: -3.9050693296759698
+      'y': 5
+      z: -14.5
+      rotX: -15.111811601597742
+      rotY: -180
+      rotZ: 0
+      traceGenerated: true
+ledStrands:
+  _section:
+    label: 💡 LED Strands
+    type: ledStrandArray
+    collapsed: true
+  strandsEnabled:
+    value: true
+    label: Master Enabled
+  strands: []
+traces:
+  - name: Bars_0_1_2
+    shape: line
+    startX: 6.029599387217219
+    startY: 5
+    startZ: 0
+    endX: -0.8554471398456158
+    endY: 5
+    endZ: 0
+    spacing: 2.5
+    aimMode: direction
+    aimX: 6
+    aimY: 4
+    aimZ: -6
+    lightColor: '#ffaa44'
+    lightIntensity: 10
+    lightAngle: 30
+    groupName: Bars_0_1_2
+    fixtureType: ShehdsBar
+    generated: true
+    controllerIp: ''
+    fixtureRotOffX: 0
+    fixtureRotOffY: 0
+    fixtureRotOffZ: 0
+    locked: false
+  - name: Bars_5_6_7
+    shape: line
+    startX: -7.032730061530545
+    startY: 5
+    startZ: -13.14206907964391
+    endX: -7.12598878864052
+    endY: 5
+    endZ: -6.3927614188948745
+    spacing: 2
+    aimMode: direction
+    aimX: -3.071132133995791
+    aimY: 3.8884302014039376
+    aimZ: -13.003591390861182
+    lightColor: '#ffaa44'
+    lightIntensity: 10
+    lightAngle: 30
+    groupName: Bars_5_6_7
+    fixtureType: ShehdsBar
+    generated: true
+    controllerIp: ''
+    fixtureRotOffX: 0
+    fixtureRotOffY: 0
+    fixtureRotOffZ: 0
+    locked: false
+  - name: Bars_8_9
+    shape: line
+    startX: 0.09973751431044908
+    startY: 5
+    startZ: -14.5
+    endX: -3.9050693296759698
+    endY: 5
+    endZ: -14.5
+    spacing: 2
+    aimMode: direction
+    aimX: 0.23368862578146832
+    aimY: 3.7415671682057514
+    aimZ: -9.839860498425013
+    lightColor: '#ffaa44'
+    lightIntensity: 10
+    lightAngle: 30
+    groupName: Bars_8_9
+    fixtureType: ShehdsBar
+    generated: true
+    controllerIp: ''
+    fixtureRotOffX: 0
+    fixtureRotOffY: 0
+    fixtureRotOffZ: 0
+    locked: false

@@ -1,0 +1,47 @@
+nextControllerId: 4
+nextUniverse: 14
+controllers:
+  - id: 1
+    name: controller_10.1.1.11
+    ip: 10.1.1.11
+    ports:
+      - port: 1
+        universe: 2
+        chain:
+          - fixture: Bars_0_1_2 1
+            at: 1
+          - fixture: Bars_0_1_2 2
+            at: 120
+          - fixture: Bars_0_1_2 3
+            at: 239
+      - port: 2
+        universe: 3
+        chain:
+          - fixture: ShehdsBar 5
+            at: 1
+          - fixture: ShehdsBar 6
+            at: 120
+  - id: 2
+    name: controller_10.1.1.13
+    ip: 10.1.1.13
+    ports:
+      - port: 1
+        universe: 4
+        chain:
+          - fixture: Bars_5_6_7 1
+            at: 1
+          - fixture: Bars_5_6_7 2
+            at: 120
+          - fixture: Bars_5_6_7 3
+            at: 239
+  - id: 3
+    name: controller_10.1.1.12
+    ip: 10.1.1.12
+    ports:
+      - port: 1
+        universe: 5
+        chain:
+          - fixture: Bars_8_9 1
+            at: 1
+          - fixture: Bars_8_9 2
+            at: 120

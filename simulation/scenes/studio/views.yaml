@@ -1,0 +1,7 @@
+views:
+  groupBits:
+    Bars_3_4: 1
+    Bars_5_6_7: 4
+    Bars_0_1_2: 8
+    Bars_8_9: 2
+  custom: []
