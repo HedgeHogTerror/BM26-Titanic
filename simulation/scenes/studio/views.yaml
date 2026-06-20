@@ -4,4 +4,12 @@ views:
     Bars_5_6_7: 4
     Bars_0_1_2: 8
     Bars_8_9: 2
-  custom: []
+    Vintage_0_1_2_3: 16
+    Vintage_4_5_6_7: 32
+    Vintage_8_9_10_11: 64
+  custom:
+    - name: LeftSide
+      bit: 128
+      groups:
+        - Bars_0_1_2
+        - Vintage_0_1_2_3

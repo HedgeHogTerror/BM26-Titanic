@@ -16,6 +16,7 @@ npm install
 node engine.js --pattern rainbow --model test_bench
 ```
 
+
 The engine will:
 1. Boot up an HTTP/WebSocket **Output Server** on `http://localhost:6968`.
 2. Load the pixel model from `models/test_bench.js`.

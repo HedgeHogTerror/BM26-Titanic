@@ -48,7 +48,7 @@ parLights:
   _section:
     label: 🔌 DMX Fixtures
     type: fixtureArray
-    collapsed: false
+    collapsed: true
   parsEnabled:
     value: true
     label: Master Enabled
@@ -97,6 +97,48 @@ parLights:
       rotX: 0
       rotY: 0
       rotZ: 0
+    - group: Bars_0_1_2
+      name: Bars_0_1_2 1
+      fixtureType: ShehdsBar
+      color: '#ffaa44'
+      intensity: 10
+      angle: 30
+      penumbra: 0.5
+      x: 6.029599387217219
+      'y': 5
+      z: 0
+      rotX: -9.462322208025618
+      rotY: -8.481479150569377e-15
+      rotZ: 180
+      traceGenerated: true
+    - group: Bars_0_1_2
+      name: Bars_0_1_2 2
+      fixtureType: ShehdsBar
+      color: '#ffaa44'
+      intensity: 10
+      angle: 30
+      penumbra: 0.5
+      x: 2.5870761236858018
+      'y': 5
+      z: 0
+      rotX: -9.462322208025618
+      rotY: -8.481479150569377e-15
+      rotZ: 180
+      traceGenerated: true
+    - group: Bars_0_1_2
+      name: Bars_0_1_2 3
+      fixtureType: ShehdsBar
+      color: '#ffaa44'
+      intensity: 10
+      angle: 30
+      penumbra: 0.5
+      x: -0.8554471398456158
+      'y': 5
+      z: 0
+      rotX: -9.462322208025618
+      rotY: -8.481479150569377e-15
+      rotZ: 180
+      traceGenerated: true
     - group: Bars_5_6_7
       name: Bars_5_6_7 1
       fixtureType: ShehdsBar
@@ -139,48 +181,6 @@ parLights:
       rotY: -90.79163548573341
       rotZ: 0
       traceGenerated: true
-    - group: Bars_0_1_2
-      name: Bars_0_1_2 1
-      fixtureType: ShehdsBar
-      color: '#ffaa44'
-      intensity: 10
-      angle: 30
-      penumbra: 0.5
-      x: 6.029599387217219
-      'y': 5
-      z: 0
-      rotX: -9.46232220802562
-      rotY: -8.481479150569377e-15
-      rotZ: 180
-      traceGenerated: true
-    - group: Bars_0_1_2
-      name: Bars_0_1_2 2
-      fixtureType: ShehdsBar
-      color: '#ffaa44'
-      intensity: 10
-      angle: 30
-      penumbra: 0.5
-      x: 2.5870761236858018
-      'y': 5
-      z: 0
-      rotX: -9.46232220802562
-      rotY: -8.481479150569377e-15
-      rotZ: 180
-      traceGenerated: true
-    - group: Bars_0_1_2
-      name: Bars_0_1_2 3
-      fixtureType: ShehdsBar
-      color: '#ffaa44'
-      intensity: 10
-      angle: 30
-      penumbra: 0.5
-      x: -0.8554471398456158
-      'y': 5
-      z: 0
-      rotX: -9.46232220802562
-      rotY: -8.481479150569377e-15
-      rotZ: 180
-      traceGenerated: true
     - group: Bars_8_9
       name: Bars_8_9 1
       fixtureType: ShehdsBar
@@ -207,6 +207,174 @@ parLights:
       z: -14.5
       rotX: -15.111811601597742
       rotY: -180
+      rotZ: 0
+      traceGenerated: true
+    - group: Vintage_0_1_2_3
+      name: Vintage_0_1_2_3 1
+      fixtureType: VintageLed
+      color: '#ffaa44'
+      intensity: 10
+      angle: 30
+      penumbra: 0.5
+      x: 8.013246065468252
+      'y': 5
+      z: 0.3987179529501579
+      rotX: -9.109807822303635
+      rotY: -0.023600009449076493
+      rotZ: 180
+      traceGenerated: true
+    - group: Vintage_0_1_2_3
+      name: Vintage_0_1_2_3 2
+      fixtureType: VintageLed
+      color: '#ffaa44'
+      intensity: 10
+      angle: 30
+      penumbra: 0.5
+      x: 4.404976772247693
+      'y': 5
+      z: 0.39723171443565747
+      rotX: -9.109807822303635
+      rotY: -0.023600009449076493
+      rotZ: 180
+      traceGenerated: true
+    - group: Vintage_0_1_2_3
+      name: Vintage_0_1_2_3 3
+      fixtureType: VintageLed
+      color: '#ffaa44'
+      intensity: 10
+      angle: 30
+      penumbra: 0.5
+      x: 0.796707479027134
+      'y': 5
+      z: 0.3957454759211571
+      rotX: -9.109807822303635
+      rotY: -0.023600009449076493
+      rotZ: 180
+      traceGenerated: true
+    - group: Vintage_0_1_2_3
+      name: Vintage_0_1_2_3 4
+      fixtureType: VintageLed
+      color: '#ffaa44'
+      intensity: 10
+      angle: 30
+      penumbra: 0.5
+      x: -2.811561814193425
+      'y': 5
+      z: 0.3942592374066567
+      rotX: -9.109807822303635
+      rotY: -0.023600009449076493
+      rotZ: 180
+      traceGenerated: true
+    - group: Vintage_4_5_6_7
+      name: Vintage_4_5_6_7 1
+      fixtureType: VintageLed
+      color: '#ffaa44'
+      intensity: 10
+      angle: 30
+      penumbra: 0.5
+      x: -7.531297412110401
+      'y': 5
+      z: -11.196729865374207
+      rotX: -46.91998888223607
+      rotY: 91.48408255110122
+      rotZ: 178.14204077746098
+      traceGenerated: true
+    - group: Vintage_4_5_6_7
+      name: Vintage_4_5_6_7 2
+      fixtureType: VintageLed
+      color: '#ffaa44'
+      intensity: 10
+      angle: 30
+      penumbra: 0.5
+      x: -7.523248289198042
+      'y': 5.080557909443304
+      z: -7.559837929549908
+      rotX: -46.91998888223607
+      rotY: 91.48408255110122
+      rotZ: 178.14204077746098
+      traceGenerated: true
+    - group: Vintage_4_5_6_7
+      name: Vintage_4_5_6_7 3
+      fixtureType: VintageLed
+      color: '#ffaa44'
+      intensity: 10
+      angle: 30
+      penumbra: 0.5
+      x: -7.515199166285682
+      'y': 5.161115818886609
+      z: -3.922945993725609
+      rotX: -46.91998888223607
+      rotY: 91.48408255110122
+      rotZ: 178.14204077746098
+      traceGenerated: true
+    - group: Vintage_4_5_6_7
+      name: Vintage_4_5_6_7 4
+      fixtureType: VintageLed
+      color: '#ffaa44'
+      intensity: 10
+      angle: 30
+      penumbra: 0.5
+      x: -7.507150043373323
+      'y': 5.241673728329913
+      z: -0.28605405790130867
+      rotX: -46.91998888223607
+      rotY: 91.48408255110122
+      rotZ: 178.14204077746098
+      traceGenerated: true
+    - group: Vintage_8_9_10_11
+      name: Vintage_8_9_10_11 1
+      fixtureType: VintageLed
+      color: '#ffaa44'
+      intensity: 10
+      angle: 30
+      penumbra: 0.5
+      x: 8
+      'y': 5
+      z: -15
+      rotX: -19.718080874068036
+      rotY: 178.09084756700364
+      rotZ: 0
+      traceGenerated: true
+    - group: Vintage_8_9_10_11
+      name: Vintage_8_9_10_11 2
+      fixtureType: VintageLed
+      color: '#ffaa44'
+      intensity: 10
+      angle: 30
+      penumbra: 0.5
+      x: 3
+      'y': 5
+      z: -15.166666666666666
+      rotX: -19.718080874068036
+      rotY: 178.09084756700364
+      rotZ: 0
+      traceGenerated: true
+    - group: Vintage_8_9_10_11
+      name: Vintage_8_9_10_11 3
+      fixtureType: VintageLed
+      color: '#ffaa44'
+      intensity: 10
+      angle: 30
+      penumbra: 0.5
+      x: -2
+      'y': 5
+      z: -15.333333333333334
+      rotX: -19.718080874068036
+      rotY: 178.09084756700364
+      rotZ: 0
+      traceGenerated: true
+    - group: Vintage_8_9_10_11
+      name: Vintage_8_9_10_11 4
+      fixtureType: VintageLed
+      color: '#ffaa44'
+      intensity: 10
+      angle: 30
+      penumbra: 0.5
+      x: -7
+      'y': 5
+      z: -15.5
+      rotX: -19.718080874068036
+      rotY: 178.09084756700364
       rotZ: 0
       traceGenerated: true
 ledStrands:
@@ -285,6 +453,78 @@ traces:
     lightAngle: 30
     groupName: Bars_8_9
     fixtureType: ShehdsBar
+    generated: true
+    controllerIp: ''
+    fixtureRotOffX: 0
+    fixtureRotOffY: 0
+    fixtureRotOffZ: 0
+    locked: false
+  - name: Vintage_0_1_2_3
+    shape: line
+    startX: 8.013246065468252
+    startY: 5
+    startZ: 0.3987179529501579
+    endX: -2.8115618141934258
+    endY: 5
+    endZ: 0.3942592374066567
+    spacing: 2.5
+    aimMode: direction
+    aimX: 8.425810539016746
+    aimY: 4.488266596653546
+    aimZ: -2.7924725513956754
+    lightColor: '#ffaa44'
+    lightIntensity: 10
+    lightAngle: 30
+    groupName: Vintage_0_1_2_3
+    fixtureType: VintageLed
+    generated: true
+    controllerIp: ''
+    fixtureRotOffX: 0
+    fixtureRotOffY: 0
+    fixtureRotOffZ: 0
+    locked: false
+  - name: Vintage_4_5_6_7
+    shape: line
+    startX: -7.531297412110401
+    startY: 5
+    startZ: -11.196729865374207
+    endX: -7.507150043373323
+    endY: 5.241673728329913
+    endZ: -0.286054057901308
+    spacing: 2.75
+    aimMode: direction
+    aimX: -11.94986941439646
+    aimY: 0.2416737283299133
+    aimZ: -12.682160664079122
+    lightColor: '#ffaa44'
+    lightIntensity: 10
+    lightAngle: 30
+    groupName: Vintage_4_5_6_7
+    fixtureType: VintageLed
+    generated: true
+    controllerIp: ''
+    fixtureRotOffX: 0
+    fixtureRotOffY: 0
+    fixtureRotOffZ: 0
+    locked: false
+  - name: Vintage_8_9_10_11
+    shape: line
+    startX: 8
+    startY: 5
+    startZ: -15
+    endX: -7
+    endY: 5
+    endZ: -15.5
+    spacing: 4.25
+    aimMode: direction
+    aimX: 0.5
+    aimY: -1
+    aimZ: 1.5
+    lightColor: '#ffaa44'
+    lightIntensity: 10
+    lightAngle: 30
+    groupName: Vintage_8_9_10_11
+    fixtureType: VintageLed
     generated: true
     controllerIp: ''
     fixtureRotOffX: 0
