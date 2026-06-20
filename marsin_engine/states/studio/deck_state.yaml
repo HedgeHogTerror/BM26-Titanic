@@ -1,25 +1,33 @@
 channel:
   id: ch_base
   name: Base
-  pattern: 00_golden_hour_wash
+  pattern: 11_bioluminescence
   mode: blend_screen
   fader: 1
   enabled: true
   locked: false
   faderLocked: false
   localControls:
-    '682166867':
-      v0: 0.87
+    '1037917937':
+      v0: 0.13
       v1: 0
       v2: 0
-    '1037917937':
-      v0: 0.37
+    '1391556809':
+      v0: 0.07
+      v1: 0
+      v2: 0
+    '1969168382':
+      v0: 0
+      v1: 0
+      v2: 0
+    '3680310977':
+      v0: 0.85
       v1: 0
       v2: 0
   playlist:
     name: default
-    activeEntryId: e_default_0_00_golden_hour_wash
-    cursor: 0
+    activeEntryId: e_default_20_11_bioluminescence
+    cursor: 20
     autopilot:
       active: false
       delay_s: 10

@@ -1,4 +1,4 @@
-master: 1
+master: 0.2
 channels:
   - id: ch_1781492898239_0
     name: New Layer
@@ -10,7 +10,15 @@ channels:
     faderLocked: false
     transitionMode: trans_crossfade
     transitionTime: 1
-    localControls: {}
+    localControls:
+      '682166867':
+        v0: 0.87
+        v1: 0
+        v2: 0
+      '1037917937':
+        v0: 0.37
+        v1: 0
+        v2: 0
     playlist:
       name: default
       activeEntryId: e_default_0_00_golden_hour_wash

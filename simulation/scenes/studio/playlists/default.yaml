@@ -5,15 +5,15 @@ entries:
     pattern: 00_golden_hour_wash
     label: null
     defaults:
-      sliderLocalSpeed: 0.37
-      sliderNoiseScale: 0.87
+      sliderLocalSpeed: 0.18
+      sliderNoiseScale: 0.14
     modulations: []
     notes: null
   - id: e_default_1_01_cylon_sweep
     pattern: 01_cylon_sweep
     label: null
     defaults:
-      sliderLocalSpeed: 0.53
+      sliderLocalSpeed: 0.22
       sliderBeamWidth: 0
       sliderBackgroundGlow: 0
       sliderDirection: 0.17
@@ -148,7 +148,11 @@ entries:
   - id: e_default_20_11_bioluminescence
     pattern: 11_bioluminescence
     label: null
-    defaults: {}
+    defaults:
+      sliderLocalSpeed: 0.13
+      sliderDensity: 0.85
+      sliderUvGlow: 0.07
+      sliderPartyMode: 0
     modulations: []
     notes: null
   - id: e_default_21_12_breathing

@@ -77,7 +77,7 @@ parLights:
     max: 200
     step: 1
   generatorsVisible:
-    value: false
+    value: true
     label: Show Generators
   fixtures:
     - group: Right Front Wall Generator
