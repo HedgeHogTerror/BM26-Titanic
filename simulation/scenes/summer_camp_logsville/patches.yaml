@@ -71,6 +71,14 @@ patches:
     sectionId: 7
     fixtureId: 2
     viewMask: 0
+  TEFogMachine 39:
+    controllerIp: 10.1.1.17
+    dmxUniverse: 1
+    dmxAddress: 512
+    controllerId: 0
+    sectionId: 0
+    fixtureId: 0
+    viewMask: 0
   WallVintageLights 1:
     controllerIp: 10.1.1.17
     dmxUniverse: 2
@@ -294,12 +302,4 @@ patches:
     controllerId: 0
     sectionId: 2
     fixtureId: 3001
-    viewMask: 0
-  TEFogMachine 39:
-    controllerIp: 10.1.1.17
-    dmxUniverse: 1
-    dmxAddress: 512
-    controllerId: 0
-    sectionId: 0
-    fixtureId: 0
     viewMask: 0

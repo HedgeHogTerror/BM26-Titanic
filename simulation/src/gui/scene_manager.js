@@ -1,11 +1,15 @@
 /**
- * scene_manager.js — Add / delete scenes from the HUD scene picker.
+ * scene_manager.js — Add / duplicate / delete scenes from the HUD scene picker.
  *
- * Wires the ＋ and 🗑 buttons sitting next to #scene-select:
- *   - Add    → in-app prompt for a name, POST /create-scene, then navigate
- *              to ?scene=<new>. The save-server seeds a minimal
- *              scenes/<name>/scene_config.yaml and regenerates the manifest.
- *   - Delete → in-app confirm (NOT the native confirm(), so it matches the
+ * Wires the ＋, ⧉ and 🗑 buttons sitting next to #scene-select:
+ *   - Add       → in-app prompt for a name, POST /create-scene, then navigate
+ *                 to ?scene=<new>. The save-server seeds a minimal
+ *                 scenes/<name>/scene_config.yaml and regenerates the manifest.
+ *   - Duplicate → in-app prompt for a name, POST /duplicate-scene with the
+ *                 active scene as the source. The save-server recursively
+ *                 copies the source scene dir (fixtures, controllers, patches,
+ *                 views, cameras) to the new name, then navigate to ?scene=<new>.
+ *   - Delete    → in-app confirm (NOT the native confirm(), so it matches the
  *              rest of the HUD), POST /delete-scene, then navigate to a
  *              still-existing scene.
  *
@@ -170,6 +174,47 @@ async function handleAdd() {
   }
 }
 
+async function handleDuplicate() {
+  const select = document.getElementById('scene-select');
+  const source = (select && select.value) || window.__activeScene;
+  if (!source) return;
+  const name = await showModal({
+    title: 'Duplicate scene',
+    message: `Copy scene "${source}" — its fixtures, controllers, patches, ` +
+      `views and cameras — into a new scene. Name for the copy:`,
+    withInput: true,
+    placeholder: `${source}_copy`,
+    okLabel: 'Duplicate',
+  });
+  if (!name) return;
+  const safe = name.toLowerCase().replace(/\s+/g, '_').replace(/[^a-z0-9_-]/g, '').replace(/^_+|_+$/g, '');
+  if (!safe) {
+    await showAlert('Invalid name', 'Use letters, numbers, _ or -.');
+    return;
+  }
+  try {
+    const resp = await fetch(`${SAVE_URL}/duplicate-scene`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ source, name: safe }),
+    });
+    if (resp.status === 409) {
+      await showAlert('Already exists', `A scene named "${safe}" already exists.`);
+      return;
+    }
+    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+    const data = await resp.json().catch(() => null);
+    const scene = data && typeof data.scene === 'string' ? data.scene : '';
+    if (!scene) throw new Error('Server did not return a scene name');
+    const url = new URL(window.location.href);
+    url.searchParams.set('scene', scene);
+    window.location.href = url.toString();
+  } catch (e) {
+    console.error('[Scene] Duplicate failed:', e);
+    await showAlert('Duplicate failed', String(e && e.message ? e.message : e));
+  }
+}
+
 async function handleDelete() {
   const select = document.getElementById('scene-select');
   const scene = (select && select.value) || window.__activeScene;
@@ -213,18 +258,21 @@ async function handleDelete() {
 /** Wire the HUD add/delete scene buttons. Safe to call once on boot. */
 export function setupSceneManager() {
   const addBtn = document.getElementById('scene-add-btn');
+  const dupBtn = document.getElementById('scene-dup-btn');
   const delBtn = document.getElementById('scene-del-btn');
-  if (!addBtn || !delBtn) return;
+  if (!addBtn || !dupBtn || !delBtn) return;
 
   // Scene mutation needs the dev save-server (port 6970); a static host
   // can't reach it, so hide the controls instead of offering dead buttons.
   if (isStaticHost()) {
-    logStaticHostSkip('scene add/delete (port 6970)');
+    logStaticHostSkip('scene add/duplicate/delete (port 6970)');
     addBtn.style.display = 'none';
+    dupBtn.style.display = 'none';
     delBtn.style.display = 'none';
     return;
   }
 
   addBtn.addEventListener('click', handleAdd);
+  dupBtn.addEventListener('click', handleDuplicate);
   delBtn.addEventListener('click', handleDelete);
 }
