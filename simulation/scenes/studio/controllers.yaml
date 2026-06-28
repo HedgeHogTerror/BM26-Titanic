@@ -1,5 +1,5 @@
-nextControllerId: 4
-nextUniverse: 17
+nextControllerId: 5
+nextUniverse: 24
 controllers:
   - id: 1
     name: controller_10.1.1.11
@@ -78,3 +78,19 @@ controllers:
             at: 67
           - fixture: Vintage_8_9_10_11 4
             at: 100
+  - id: 4
+    name: par lights test
+    ip: 10.1.1.14
+    ports:
+      - port: 1
+        universe: 19
+        chain: []
+      - port: 2
+        universe: 20
+        chain: []
+      - port: 3
+        universe: 21
+        chain: []
+      - port: 4
+        universe: 22
+        chain: []

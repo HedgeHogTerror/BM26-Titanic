@@ -20,158 +20,158 @@ patches:
     dmxUniverse: 2
     dmxAddress: 1
     controllerId: 1
-    sectionId: 21
-    fixtureId: 67
+    sectionId: 91
+    fixtureId: 300
     viewMask: 0
   Bars_0_1_2 2:
     controllerIp: 10.1.1.11
     dmxUniverse: 2
     dmxAddress: 120
     controllerId: 1
-    sectionId: 21
-    fixtureId: 68
+    sectionId: 91
+    fixtureId: 301
     viewMask: 0
   Bars_0_1_2 3:
     controllerIp: 10.1.1.11
     dmxUniverse: 2
     dmxAddress: 239
     controllerId: 1
-    sectionId: 21
-    fixtureId: 69
+    sectionId: 91
+    fixtureId: 302
     viewMask: 0
   Bars_5_6_7 1:
     controllerIp: 10.1.1.13
     dmxUniverse: 4
     dmxAddress: 1
     controllerId: 2
-    sectionId: 22
-    fixtureId: 70
+    sectionId: 92
+    fixtureId: 303
     viewMask: 0
   Bars_5_6_7 2:
     controllerIp: 10.1.1.13
     dmxUniverse: 4
     dmxAddress: 120
     controllerId: 2
-    sectionId: 22
-    fixtureId: 71
+    sectionId: 92
+    fixtureId: 304
     viewMask: 0
   Bars_5_6_7 3:
     controllerIp: 10.1.1.13
     dmxUniverse: 4
     dmxAddress: 239
     controllerId: 2
-    sectionId: 22
-    fixtureId: 72
+    sectionId: 92
+    fixtureId: 305
     viewMask: 0
   Bars_8_9 1:
     controllerIp: 10.1.1.12
     dmxUniverse: 5
     dmxAddress: 1
     controllerId: 3
-    sectionId: 23
-    fixtureId: 73
+    sectionId: 93
+    fixtureId: 306
     viewMask: 0
   Bars_8_9 2:
     controllerIp: 10.1.1.12
     dmxUniverse: 5
     dmxAddress: 120
     controllerId: 3
-    sectionId: 23
-    fixtureId: 74
+    sectionId: 93
+    fixtureId: 307
     viewMask: 0
   Vintage_0_1_2_3 1:
     controllerIp: 10.1.1.11
     dmxUniverse: 6
     dmxAddress: 1
     controllerId: 1
-    sectionId: 24
-    fixtureId: 75
+    sectionId: 94
+    fixtureId: 308
     viewMask: 0
   Vintage_0_1_2_3 2:
     controllerIp: 10.1.1.11
     dmxUniverse: 6
     dmxAddress: 34
     controllerId: 1
-    sectionId: 24
-    fixtureId: 76
+    sectionId: 94
+    fixtureId: 309
     viewMask: 0
   Vintage_0_1_2_3 3:
     controllerIp: 10.1.1.11
     dmxUniverse: 6
     dmxAddress: 67
     controllerId: 1
-    sectionId: 24
-    fixtureId: 77
+    sectionId: 94
+    fixtureId: 310
     viewMask: 0
   Vintage_0_1_2_3 4:
     controllerIp: 10.1.1.11
     dmxUniverse: 6
     dmxAddress: 100
     controllerId: 1
-    sectionId: 24
-    fixtureId: 78
+    sectionId: 94
+    fixtureId: 311
     viewMask: 0
   Vintage_4_5_6_7 1:
     controllerIp: 10.1.1.13
     dmxUniverse: 7
     dmxAddress: 1
     controllerId: 2
-    sectionId: 25
-    fixtureId: 79
+    sectionId: 95
+    fixtureId: 312
     viewMask: 0
   Vintage_4_5_6_7 2:
     controllerIp: 10.1.1.13
     dmxUniverse: 7
     dmxAddress: 34
     controllerId: 2
-    sectionId: 25
-    fixtureId: 80
+    sectionId: 95
+    fixtureId: 313
     viewMask: 0
   Vintage_4_5_6_7 3:
     controllerIp: 10.1.1.13
     dmxUniverse: 7
     dmxAddress: 67
     controllerId: 2
-    sectionId: 25
-    fixtureId: 81
+    sectionId: 95
+    fixtureId: 314
     viewMask: 0
   Vintage_4_5_6_7 4:
     controllerIp: 10.1.1.13
     dmxUniverse: 7
     dmxAddress: 100
     controllerId: 2
-    sectionId: 25
-    fixtureId: 82
+    sectionId: 95
+    fixtureId: 315
     viewMask: 0
   Vintage_8_9_10_11 1:
     controllerIp: 10.1.1.12
     dmxUniverse: 8
     dmxAddress: 1
     controllerId: 3
-    sectionId: 26
-    fixtureId: 83
+    sectionId: 96
+    fixtureId: 316
     viewMask: 0
   Vintage_8_9_10_11 2:
     controllerIp: 10.1.1.12
     dmxUniverse: 8
     dmxAddress: 34
     controllerId: 3
-    sectionId: 26
-    fixtureId: 84
+    sectionId: 96
+    fixtureId: 317
     viewMask: 0
   Vintage_8_9_10_11 3:
     controllerIp: 10.1.1.12
     dmxUniverse: 8
     dmxAddress: 67
     controllerId: 3
-    sectionId: 26
-    fixtureId: 85
+    sectionId: 96
+    fixtureId: 318
     viewMask: 0
   Vintage_8_9_10_11 4:
     controllerIp: 10.1.1.12
     dmxUniverse: 8
     dmxAddress: 100
     controllerId: 3
-    sectionId: 26
-    fixtureId: 86
+    sectionId: 96
+    fixtureId: 319
     viewMask: 0

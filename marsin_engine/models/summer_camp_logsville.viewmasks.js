@@ -1,6 +1,6 @@
 // Auto-generated view-mask sidecar for the summer_camp_logsville model — do not edit manually.
 // Source of truth: the simulation scene (Views panel → scenes/summer_camp_logsville/views.yaml).
-// Updated: 2026-06-10T19:55:08.246Z
+// Updated: 2026-06-28T01:57:29.613Z
 //
 // `groupBits` pins the base group → bit contract pattern code compiles
 // against; the engine validates it against the loaded model and fails

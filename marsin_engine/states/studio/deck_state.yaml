@@ -9,11 +9,11 @@ channel:
   faderLocked: false
   localControls:
     '1037917937':
-      v0: 0.13
+      v0: 0.04
       v1: 0
       v2: 0
     '1391556809':
-      v0: 0.07
+      v0: 0
       v1: 0
       v2: 0
     '1969168382':
@@ -21,7 +21,7 @@ channel:
       v1: 0
       v2: 0
     '3680310977':
-      v0: 0.85
+      v0: 0
       v1: 0
       v2: 0
   playlist:
@@ -30,7 +30,7 @@ channel:
     cursor: 20
     autopilot:
       active: false
-      delay_s: 10
+      delay_s: 30
       shuffle: true
   viewSelection:
     type: all

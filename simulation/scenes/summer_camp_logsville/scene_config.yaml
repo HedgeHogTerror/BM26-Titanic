@@ -200,6 +200,19 @@ parLights:
       rotX: -0.0
       rotY: 0
       rotZ: 0
+    - group: Fogger
+      name: TEFogMachine 39
+      fixtureType: TEFogMachine
+      color: '#ffaa44'
+      intensity: 0
+      angle: 20
+      penumbra: 0.5
+      x: 0
+      'y': 1.5
+      z: 0
+      rotX: 0
+      rotY: 0
+      rotZ: 0
     - group: WallVintageLights
       name: WallVintageLights 1
       fixtureType: VintageLed
@@ -560,8 +573,8 @@ parLights:
       x: 3.5
       'y': 0.6666666666666666
       z: 0
-      rotX: -9.607757082724715
-      rotY: -0.2486888552585848
+      rotX: -9.607757082724717
+      rotY: -0.24868885525858486
       rotZ: 1.489700686984738
       traceGenerated: true
     - group: LedBarsWall
@@ -592,19 +605,6 @@ parLights:
       rotY: -0.24868885525858486
       rotZ: 1.489700686984738
       traceGenerated: true
-    - group: Fogger
-      name: TEFogMachine 39
-      fixtureType: TEFogMachine
-      color: '#ffaa44'
-      intensity: 0
-      angle: 20
-      penumbra: 0.5
-      x: 0
-      'y': 1.5
-      z: 0
-      rotX: 0
-      rotY: 0
-      rotZ: 0
 ledStrands:
   _section:
     label: 💡 LED Strands

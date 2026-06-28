@@ -437,6 +437,50 @@ http.createServer((req, res) => {
         res.end('Error: ' + e.message);
       }
     });
+  } else if (req.method === 'POST' && pathname === '/duplicate-scene') {
+    let body = '';
+    req.on('data', chunk => body += chunk);
+    req.on('end', () => {
+      try {
+        const { source, name } = JSON.parse(body);
+        // Both names must be safe single path segments (same contract as
+        // create/delete) — reject rather than rewrite (codex P0: fail loud).
+        if (!isValidSceneName(source) || !isValidSceneName(name)) {
+          res.statusCode = 400;
+          res.end('Invalid scene name');
+          return;
+        }
+        const sourceDir = path.join(SCENES_ROOT, source);
+        // The source must be a real scene (has scene_config.yaml) sitting
+        // directly under scenes/ — mirrors the delete-scene guard.
+        if (path.dirname(sourceDir) !== SCENES_ROOT || !fs.existsSync(path.join(sourceDir, 'scene_config.yaml'))) {
+          res.statusCode = 404;
+          res.end('Source scene not found');
+          return;
+        }
+        const destDir = path.join(SCENES_ROOT, name);
+        // Refuse if anything already lives at the destination — never adopt
+        // or merge into a pre-existing directory (codex P0: fail loud).
+        if (fs.existsSync(destDir)) {
+          res.statusCode = 409;
+          res.end('Scene already exists');
+          return;
+        }
+        // Recursive copy clones the whole scene — scene_config.yaml,
+        // patches.yaml, controllers.yaml, views.yaml, cameras.yaml and the
+        // playlists/ dir — so the duplicate starts with identical fixtures
+        // and controller configs, exactly as the operator expects.
+        fs.cpSync(sourceDir, destDir, { recursive: true });
+        console.log(`[SAVE SERVER] ✅ Duplicated scene: ${sourceDir} → ${destDir}`);
+        writeSceneManifest();
+        res.setHeader('Content-Type', 'application/json');
+        res.end(JSON.stringify({ scene: name }));
+      } catch (e) {
+        console.error(`[SAVE SERVER] Scene duplicate error:`, e);
+        res.statusCode = 500;
+        res.end('Error: ' + e.message);
+      }
+    });
   } else if (req.method === 'POST' && pathname === '/delete-scene') {
     let body = '';
     req.on('data', chunk => body += chunk);

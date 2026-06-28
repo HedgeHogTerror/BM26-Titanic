@@ -1,26 +1,23 @@
 views:
   groupBits:
-    TowerBars: 0x001
-    TowerVintageLights: 0x002
-    DJ Lights: 0x004
-    WallVintageLights: 0x008
-    Redwoods1: 0x010
-    Redwoods2: 0x020
-    # 0x040 / 0x080 reserved by the RedwoodPARs / VintageOnly views below —
-    # the Logsville pattern family hardcodes MASK_REDWOOD_PARS = 64 and
-    # MASK_VINTAGE_ONLY = 128.
-    Redwoods3: 0x100
-    WallVintageLightsTop: 0x200
-    LedBarsWall: 0x400
+    TowerBars: 1
+    TowerVintageLights: 2
+    DJ Lights: 4
+    WallVintageLights: 8
+    Redwoods1: 16
+    Redwoods2: 32
+    Redwoods3: 256
+    WallVintageLightsTop: 512
+    LedBarsWall: 1024
   custom:
     - name: RedwoodPARs
-      bit: 0x040
+      bit: 64
       groups:
         - Redwoods1
         - Redwoods2
         - Redwoods3
     - name: VintageOnly
-      bit: 0x080
+      bit: 128
       groups:
         - TowerVintageLights
         - WallVintageLights

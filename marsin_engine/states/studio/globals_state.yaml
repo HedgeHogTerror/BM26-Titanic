@@ -1,19 +1,19 @@
 blackout: false
 effects: {}
 params:
-  revision: 207
+  revision: 696
   sourceLock: null
   params:
     speed:
-      value: 0.31
+      value: 0.57
       lastSource: api
       lastOrigin: api
-      lastRevision: 207
+      lastRevision: 676
     size:
       value: 1
       lastSource: api
       lastOrigin: api
-      lastRevision: 133
+      lastRevision: 696
     rotate:
       value: 0
       lastSource: null
@@ -21,20 +21,20 @@ params:
       lastRevision: 0
     colorPalette1:
       value:
-        h: 0
+        h: 0.35
         s: 1
         v: 1
       lastSource: api
       lastOrigin: api
-      lastRevision: 166
+      lastRevision: 681
     colorPalette2:
       value:
-        h: 0.13
+        h: 0.85
         s: 1
         v: 1
       lastSource: api
       lastOrigin: api
-      lastRevision: 167
+      lastRevision: 682
     stemsVocalsGain:
       value: 1
       lastSource: null

@@ -1,6 +1,6 @@
 // Auto-generated view-mask sidecar for the studio model — do not edit manually.
 // Source of truth: the simulation scene (Views panel → scenes/studio/views.yaml).
-// Updated: 2026-06-20T01:31:11.047Z
+// Updated: 2026-06-28T02:16:35.736Z
 //
 // `groupBits` pins the base group → bit contract pattern code compiles
 // against; the engine validates it against the loaded model and fails

@@ -48,24 +48,24 @@ parLights:
   _section:
     label: 🔌 DMX Fixtures
     type: fixtureArray
-    collapsed: true
+    collapsed: false
   parsEnabled:
     value: true
     label: Master Enabled
   masterExposure:
-    value: 0.2
+    value: 0.15
     label: Sim Exposure (Preview Only)
     min: 0
     max: 2
     step: 0.05
   simBrightness:
-    value: 1
+    value: 0.4
     label: Sim Brightness (Preview Only)
     min: 0
     max: 2
     step: 0.05
   maxSpotlights:
-    value: 60
+    value: 118
     label: Max Spotlights
     min: 1
     max: 200
@@ -191,7 +191,7 @@ parLights:
       x: 0.09973751431044908
       'y': 5
       z: -14.5
-      rotX: -15.111811601597742
+      rotX: -68.33110667732663
       rotY: -180
       rotZ: 0
       traceGenerated: true
@@ -205,7 +205,7 @@ parLights:
       x: -3.9050693296759698
       'y': 5
       z: -14.5
-      rotX: -15.111811601597742
+      rotX: -68.33110667732663
       rotY: -180
       rotZ: 0
       traceGenerated: true
@@ -273,11 +273,11 @@ parLights:
       angle: 30
       penumbra: 0.5
       x: -7.531297412110401
-      'y': 5
+      'y': 5.5
       z: -11.196729865374207
-      rotX: -46.91998888223607
-      rotY: 91.48408255110122
-      rotZ: 178.14204077746098
+      rotX: -80.15704448368257
+      rotY: 82.28365182134239
+      rotZ: -172.04116045246664
       traceGenerated: true
     - group: Vintage_4_5_6_7
       name: Vintage_4_5_6_7 2
@@ -287,11 +287,11 @@ parLights:
       angle: 30
       penumbra: 0.5
       x: -7.523248289198042
-      'y': 5.080557909443304
+      'y': 5.4138912427766375
       z: -7.559837929549908
-      rotX: -46.91998888223607
-      rotY: 91.48408255110122
-      rotZ: 178.14204077746098
+      rotX: -80.15704448368257
+      rotY: 82.28365182134239
+      rotZ: -172.04116045246664
       traceGenerated: true
     - group: Vintage_4_5_6_7
       name: Vintage_4_5_6_7 3
@@ -301,11 +301,11 @@ parLights:
       angle: 30
       penumbra: 0.5
       x: -7.515199166285682
-      'y': 5.161115818886609
+      'y': 5.327782485553276
       z: -3.922945993725609
-      rotX: -46.91998888223607
-      rotY: 91.48408255110122
-      rotZ: 178.14204077746098
+      rotX: -80.15704448368257
+      rotY: 82.28365182134239
+      rotZ: -172.04116045246664
       traceGenerated: true
     - group: Vintage_4_5_6_7
       name: Vintage_4_5_6_7 4
@@ -317,9 +317,9 @@ parLights:
       x: -7.507150043373323
       'y': 5.241673728329913
       z: -0.28605405790130867
-      rotX: -46.91998888223607
-      rotY: 91.48408255110122
-      rotZ: 178.14204077746098
+      rotX: -80.15704448368257
+      rotY: 82.28365182134239
+      rotZ: -172.04116045246664
       traceGenerated: true
     - group: Vintage_8_9_10_11
       name: Vintage_8_9_10_11 1
@@ -381,7 +381,7 @@ ledStrands:
   _section:
     label: 💡 LED Strands
     type: ledStrandArray
-    collapsed: true
+    collapsed: false
   strandsEnabled:
     value: true
     label: Master Enabled
@@ -447,7 +447,7 @@ traces:
     aimMode: direction
     aimX: 0.23368862578146832
     aimY: 3.7415671682057514
-    aimZ: -9.839860498425013
+    aimZ: -14
     lightColor: '#ffaa44'
     lightIntensity: 10
     lightAngle: 30
@@ -486,16 +486,16 @@ traces:
   - name: Vintage_4_5_6_7
     shape: line
     startX: -7.531297412110401
-    startY: 5
+    startY: 5.5
     startZ: -11.196729865374207
     endX: -7.507150043373323
     endY: 5.241673728329913
     endZ: -0.286054057901308
     spacing: 2.75
     aimMode: direction
-    aimX: -11.94986941439646
-    aimY: 0.2416737283299133
-    aimZ: -12.682160664079122
+    aimX: -8.5
+    aimY: -0.0
+    aimZ: -15
     lightColor: '#ffaa44'
     lightIntensity: 10
     lightAngle: 30

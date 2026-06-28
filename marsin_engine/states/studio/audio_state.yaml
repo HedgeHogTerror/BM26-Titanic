@@ -12,7 +12,7 @@ bands:
   lowMaxHz: 200
   midMaxHz: 10570
   attackMs: 8
-  releaseMs: 180
+  releaseMs: 777
   noiseGate: 0.04
 kick:
   minHz: 50
