@@ -5,7 +5,7 @@ entries:
     pattern: 00_golden_hour_wash
     label: null
     defaults:
-      sliderLocalSpeed: 0.18
+      sliderLocalSpeed: 0.08
       sliderNoiseScale: 0.14
     modulations: []
     notes: null
@@ -67,7 +67,7 @@ entries:
     pattern: 07_shimmer
     label: null
     defaults:
-      sliderLocalSpeed: 0.1
+      sliderLocalSpeed: 0.31
       sliderShimmerSpeedTrim: 0.69
       sliderDensity: 0
       sliderBreathing: 0.23
@@ -100,7 +100,12 @@ entries:
   - id: e_default_12_110_logsville_giant_pixel_chase
     pattern: 110_logsville_giant_pixel_chase
     label: null
-    defaults: {}
+    defaults:
+      sliderLocalSpeed: 0
+      sliderChaseGlow: 0.53
+      sliderSweepWidth: 0
+      sliderTrail: 0
+      sliderBlackoutDepth: 0
     modulations: []
     notes: null
   - id: e_default_13_111_logsville_giant_pixel_heartbeat
@@ -149,9 +154,9 @@ entries:
     pattern: 11_bioluminescence
     label: null
     defaults:
-      sliderLocalSpeed: 0.13
-      sliderDensity: 0.85
-      sliderUvGlow: 0.07
+      sliderLocalSpeed: 0.04
+      sliderDensity: 0
+      sliderUvGlow: 0
       sliderPartyMode: 0
     modulations: []
     notes: null
@@ -159,7 +164,7 @@ entries:
     pattern: 12_breathing
     label: null
     defaults:
-      sliderLocalSpeed: 0.12
+      sliderLocalSpeed: 0.51
       sliderRipple: 0
       sliderSharpness: 0
     modulations: []

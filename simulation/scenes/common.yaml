@@ -3,13 +3,13 @@ atmosphere:
     label: 🌌 Atmosphere
     collapsed: false
   ambientIntensity:
-    value: 0.83
+    value: 0
     label: Global Ambient
     min: 0
     max: 1
     step: 0.01
   exposure:
-    value: 0.3
+    value: 0.8
     label: Camera Exposure
     min: 0.1
     max: 3
@@ -97,7 +97,7 @@ atmosphere:
 options:
   _section:
     label: ⚙️ Options
-    collapsed: true
+    collapsed: false
   rendererMode:
     value: webgl
     label: 🚀 Graphics Engine
@@ -105,7 +105,7 @@ options:
       - webgpu
       - webgl
   lightingProfile:
-    value: pixel_mapping
+    value: full
     label: 💡 Lighting Profile
     options:
       - edit
@@ -113,7 +113,7 @@ options:
       - emissive
       - full
   spotlightSamplingMode:
-    value: uniform
+    value: closest
     label: Sim Spotlight Sampling
     options:
       - closest
@@ -135,22 +135,22 @@ options:
       - none
       - enabled
   coneOpacity:
-    value: 0.35
+    value: 0.1
     label: Cone Opacity
     min: 0
     max: 1
     step: 0.05
   generatorsVisible:
-    value: true
+    value: false
     label: Show Generators
   globalPixelScale:
-    value: 1.4
+    value: 0.1
     label: Global Pixel Size
     min: 0.1
     max: 5
     step: 0.1
   globalHaloScale:
-    value: 4.7
+    value: 3.2
     label: Global Halo Size
     min: 0.1
     max: 5
@@ -217,10 +217,10 @@ config:
     label: Auto-Save on Change
 _camera:
   position:
-    x: 17.0684
-    'y': 23.296
-    z: -39.4481
+    x: 15.0187
+    'y': 17.015
+    z: 22.2687
   target:
-    x: 4.83
-    'y': 10.6532
-    z: -15.8726
+    x: -0.0
+    'y': 5
+    z: 7.25
